@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { ArrowRight } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { CtaButton } from "@/components/ui/cta-button";
@@ -24,7 +24,7 @@ export default function CtaSection() {
           Let's discuss how we can help you achieve your business goals with a tailored digital strategy.
         </p>
         <CtaButton href="mailto:contact@kibousystems.com">
-          Get in touch <ArrowRight />
+          Get in touch <ArrowRight className="inline-block" />
         </CtaButton>
       </motion.div>
     </section>

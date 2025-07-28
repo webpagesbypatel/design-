@@ -21,7 +21,7 @@ export function CtaButton({ children, className, asChild = false, href, ...props
     <>
       <span className="absolute inset-0 h-full w-full rounded-full border border-white/50" />
       <span className="absolute inset-0 h-full w-full -translate-x-full transform bg-gradient-to-r from-kibou-indigo to-kibou-violet transition-transform duration-500 ease-kibou group-hover:translate-x-0" />
-      <span className="relative z-10 transition-colors duration-300 group-hover:text-black">
+      <span className="relative z-10 flex items-center gap-2 transition-colors duration-300 group-hover:text-black">
         {children}
       </span>
     </>
