@@ -43,7 +43,7 @@ export default function Hero() {
     <section 
       id="home" 
       ref={heroRef}
-      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden aurora-background"
+      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-[#0A0A0A]"
     >
       <ParticleCanvas />
       <div className="relative z-10 container mx-auto px-4">
