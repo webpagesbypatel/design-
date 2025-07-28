@@ -4,6 +4,7 @@ import TrustedBy from '@/components/sections/trusted-by';
 import Services from '@/components/sections/services';
 import Process from '@/components/sections/process';
 import Testimonials from '@/components/sections/testimonials';
+import Faq from '@/components/sections/faq';
 import Footer from '@/components/layout/footer';
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
         <Services />
         <Process />
         <Testimonials />
+        <Faq />
       </main>
       <Footer />
     </div>
