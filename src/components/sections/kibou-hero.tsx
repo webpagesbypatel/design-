@@ -139,7 +139,7 @@ export default function KibouHero() {
                 transition: 'transform 0.2s ease-out'
             }}
         >
-            <p className="mt-6 text-lg text-neutral-300 max-w-2xl">
+            <p className="mt-6 text-lg text-foreground/90 max-w-2xl">
               We help ambitious businesses like yours grow with a beautiful digital presence, cutting-edge tech, and flawless development.
             </p>
         </motion.div>
