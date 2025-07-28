@@ -2,42 +2,10 @@
 
 import React, { useRef, useEffect } from 'react';
 import { cn } from "@/lib/utils";
-import Image from "next/image";
 import { ParticleCanvas } from '@/components/particle-canvas';
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
-  const imageRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!imageRef.current || !heroRef.current) return;
-      
-      const { clientX, clientY } = e;
-      const { offsetWidth, offsetHeight } = heroRef.current;
-      
-      const xPos = (clientX - offsetWidth / 2) / (offsetWidth / 2);
-      const yPos = (clientY - offsetHeight / 2) / (offsetHeight / 2);
-
-      const tiltX = -(yPos * 8); // Invert for natural feel
-      const tiltY = xPos * 8;
-
-      imageRef.current.style.transform = `perspective(1000px) rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale3d(1, 1, 1)`;
-    };
-    
-    const handleMouseLeave = () => {
-      if (!imageRef.current) return;
-      imageRef.current.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
-    }
-
-    heroRef.current?.addEventListener('mousemove', handleMouseMove);
-    heroRef.current?.addEventListener('mouseleave', handleMouseLeave);
-
-    return () => {
-      heroRef.current?.removeEventListener('mousemove', handleMouseMove);
-      heroRef.current?.removeEventListener('mouseleave', handleMouseLeave);
-    };
-  }, []);
 
   return (
     <section 
@@ -47,9 +15,8 @@ export default function Hero() {
     >
       <ParticleCanvas />
       <div className="relative z-10 container mx-auto px-4">
-        <div className="grid lg:grid-cols-5 gap-8 items-center">
-          
-          <div className="lg:col-span-3 text-center lg:text-left">
+        <div className="flex justify-center">
+          <div className="text-center">
             <div className="animate-fade-in" style={{ animationDelay: '500ms' }}>
               <div className="overflow-hidden">
                 <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-tight animate-slide-up" style={{ animationDelay: '500ms' }}>
@@ -57,7 +24,7 @@ export default function Hero() {
                 </h1>
               </div>
             </div>
-            <p className="mt-6 max-w-2xl mx-auto lg:mx-0 text-lg md:text-xl text-gray-300 animate-fade-in-up" style={{ animationDelay: '700ms' }}>
+            <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-300 animate-fade-in-up" style={{ animationDelay: '700ms' }}>
               We help ambitious businesses like yours grow with boost digital presence with cutting-edge tech with beautiful design and development.
             </p>
             <div className="mt-10 animate-fade-in-up" style={{ animationDelay: '900ms' }}>
@@ -67,23 +34,6 @@ export default function Hero() {
               >
                 Get Free Consultation
               </a>
-            </div>
-          </div>
-          <div className="lg:col-span-2 hidden lg:flex justify-center items-center">
-            <div
-              ref={imageRef}
-              className="relative w-[400px] h-[400px] animate-fade-in-scale"
-              style={{ transition: 'transform 0.1s linear', animationDelay: '200ms' }}
-            >
-              <div className="w-full h-full animate-float">
-                <Image
-                  src="https://images.unsplash.com/photo-1642054220431-649c53b0d3de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8d2ViJTIwc2VydmljZXxlbnwwfHx8fDE3NTM2ODkyODl8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Abstract 3D rendering representing digital innovation"
-                  fill
-                  style={{ objectFit: "contain" }}
-                  className="rounded-full"
-                />
-              </div>
             </div>
           </div>
         </div>
