@@ -10,11 +10,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
-        code: ['monospace'],
+        body: ['"PT Sans"', 'sans-serif'],
+        headline: ['Poppins', 'sans-serif'],
       },
       colors: {
+        'kibou-indigo': '#4F46E5',
+        'kibou-violet': '#9333EA',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {
@@ -71,6 +72,9 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      transitionTimingFunction: {
+        'kibou': 'cubic-bezier(0.25, 0.8, 0.25, 1)',
+      },
       keyframes: {
         'accordion-down': {
           from: {
@@ -88,10 +92,16 @@ export default {
             height: '0',
           },
         },
+        'gradient-flow': {
+          '0%': { 'background-position': '0% 50%' },
+          '50%': { 'background-position': '100% 50%' },
+          '100%': { 'background-position': '0% 50%' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'gradient-flow': 'gradient-flow 6s ease infinite',
       },
     },
   },
