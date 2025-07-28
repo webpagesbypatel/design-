@@ -16,7 +16,7 @@ const testimonials = [
     quote: "Working with Kibou Systems was a game-changer. Their attention to detail and creative solutions are unparalleled.",
     author: "Jane Doe",
     company: "CEO, Tech Innovators",
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhdmF0YXJ8ZW58MHx8fHwxNzUzNjg5NTMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    avatar: "https://images.unsplash.com/photo-1648183185045-7a5592e66e9c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxpbmRpYW58ZW58MHx8fHwxNzUzNjkxODEyfDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     quote: "The final product exceeded all our expectations. The team is professional, responsive, and incredibly talented.",

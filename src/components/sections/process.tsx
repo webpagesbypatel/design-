@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Lightbulb, Wrench, Rocket, DraftingCompass } from "lucide-react";
+import { motion, useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const processSteps = [
@@ -27,53 +28,66 @@ const processSteps = [
     }
 ]
 
-export default function Process() {
-    const [inView, setInView] = useState(false);
-    const ref = useRef<HTMLElement>(null);
-  
-    useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setInView(true);
-            observer.disconnect();
-          }
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.2,
+            delayChildren: 0.2,
         },
-        { threshold: 0.1 }
-      );
-      if (ref.current) {
-        observer.observe(ref.current);
-      }
-      return () => {
-        if (ref.current) {
-          observer.unobserve(ref.current);
-        }
-      };
-    }, []);
+    },
+};
+
+const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+        opacity: 1,
+        y: 0,
+        transition: {
+            duration: 0.5,
+            ease: "easeOut",
+        },
+    },
+};
+
+
+export default function Process() {
+    const ref = useRef<HTMLElement>(null);
+    const isInView = useInView(ref, { once: true, amount: 0.2 });
 
     return (
         <section id="process" ref={ref} className="py-20 md:py-32 container mx-auto px-4">
-            <div className="text-center mb-16">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.7 }}
+              className="text-center mb-16"
+            >
                 <h2 className="text-4xl md:text-5xl font-bold font-headline">
                     Our Process
                 </h2>
                 <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
                     A streamlined journey from idea to impact.
                 </p>
-            </div>
+            </motion.div>
 
             <div className="relative">
                 {/* Dotted line connector */}
                 <div className="hidden md:block absolute top-8 left-1/2 -translate-x-1/2 h-full w-px border-l-2 border-dashed border-white/20"></div>
 
-                <div className="grid md:grid-cols-2 gap-x-16 gap-y-12">
+                <motion.div 
+                    variants={containerVariants}
+                    initial="hidden"
+                    animate={isInView ? "visible" : "hidden"}
+                    className="grid md:grid-cols-2 gap-x-16 gap-y-12"
+                >
                     {processSteps.map((step, index) => {
                         const isEven = index % 2 === 0;
                         return (
-                            <div 
+                            <motion.div 
                                 key={step.title}
-                                className={cn("transition-all duration-700 ease-kibou", inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10")}
-                                style={{ transitionDelay: `${index * 200}ms` }}
+                                variants={itemVariants}
                             >
                                 <div className={cn(
                                     "relative glass-card rounded-lg p-6",
@@ -96,10 +110,10 @@ export default function Process() {
                                         isEven ? "-right-2" : "-left-2"
                                     )}></div>
                                 </div>
-                            </div>
+                            </motion.div>
                         )
                     })}
-                </div>
+                </motion.div>
             </div>
         </section>
     );
