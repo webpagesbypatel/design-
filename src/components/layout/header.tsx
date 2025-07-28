@@ -47,9 +47,7 @@ export default function Header() {
             ))}
           </nav>
           <div className="hidden md:block">
-            <CtaButton asChild>
-                <a href="#">Get Free Consultation</a>
-            </CtaButton>
+            <CtaButton href="#">Get Free Consultation</CtaButton>
           </div>
           <button onClick={toggleMenu} className="md:hidden text-foreground">
             <Menu className="h-6 w-6" />
