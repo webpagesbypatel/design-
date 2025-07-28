@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import type { ReactNode } from "react";
-import NextLink from 'next/link';
 import { Slot } from "@radix-ui/react-slot";
 
 type CtaButtonProps = {
@@ -10,7 +9,7 @@ type CtaButtonProps = {
 } & (
   | (React.ButtonHTMLAttributes<HTMLButtonElement> & { asChild?: false; href?: never })
   | (React.AnchorHTMLAttributes<HTMLAnchorElement> & { asChild?: false; href: string })
-  | (React.ButtonHTMLAttributes<HTMLButtonElement> & { asChild: true; href?: string })
+  | ({ asChild: true; href?: string } & React.AnchorHTMLAttributes<HTMLAnchorElement>)
 );
 
 export function CtaButton({ children, className, asChild = false, href, ...props }: CtaButtonProps) {

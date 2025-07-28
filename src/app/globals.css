@@ -4,23 +4,23 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%; /* #0A0A0A */
-    --foreground: 0 0% 90%; /* #E5E5E5 */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 90%;
     
-    --card: 0 0% 4%;
+    --card: 240 10% 3.9%;
     --card-foreground: 0 0% 90%;
     
-    --popover: 0 0% 4%;
+    --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 90%;
     
     --primary: 0 0% 90%;
-    --primary-foreground: 0 0% 4%;
+    --primary-foreground: 240 10% 3.9%;
     
     --secondary: 0 0% 15%;
     --secondary-foreground: 0 0% 90%;
     
     --muted: 0 0% 15%;
-    --muted-foreground: 0 0% 63%; /* #A1A1A1 */
+    --muted-foreground: 0 0% 63%;
     
     --accent: 0 0% 15%;
     --accent-foreground: 0 0% 90%;
@@ -51,7 +51,7 @@
 
 @layer utilities {
   .glass-card {
-    @apply bg-[rgba(20,20,20,0.6)] backdrop-blur-[15px] border border-white/10;
+    @apply bg-[rgba(20,20,20,0.5)] backdrop-blur-[15px] border border-white/10;
   }
 
   .text-gradient {
@@ -61,5 +61,25 @@
   .gradient-background {
      @apply bg-gradient-to-r from-kibou-indigo to-kibou-violet;
      background-size: 200% 200%;
+  }
+
+  .gradient-border {
+    position: relative;
+    border-radius: inherit;
+    background-clip: padding-box;
+    border: 1px solid transparent;
+  }
+
+  .gradient-border::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -1px;
+    border-radius: inherit;
+    background: linear-gradient(to right, #4F46E5, #9333EA);
   }
 }

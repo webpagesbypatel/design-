@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { CtaButton } from "@/components/ui/cta-button";
 import { Menu, X } from 'lucide-react';
 
-const navLinks = ["Services", "Process", "Testimonials"];
+const navLinks = ["Work", "Services", "Blog", "Contact"];
 
 export default function Header() {
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -31,7 +31,7 @@ export default function Header() {
       >
         <div className="container mx-auto flex items-center justify-between px-4">
           <a href="#home" className="text-2xl font-bold font-headline tracking-tighter">
-            Kibou
+            Kibou Systems
             <span className="text-kibou-violet">.</span>
           </a>
           <nav className="hidden md:flex items-center gap-8">
@@ -39,7 +39,7 @@ export default function Header() {
               <a
                 key={link}
                 href={`#${link.toLowerCase()}`}
-                className="group relative text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300"
+                className="group relative text-sm font-medium text-foreground hover:text-foreground/80 transition-colors duration-300"
               >
                 {link}
                 <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 h-1 w-1 rounded-full bg-gradient-to-r from-kibou-indigo to-kibou-violet opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -47,7 +47,7 @@ export default function Header() {
             ))}
           </nav>
           <div className="hidden md:block">
-            <CtaButton href="#">Get Free Consultation</CtaButton>
+            <CtaButton href="#contact">Get Free Consultation</CtaButton>
           </div>
           <button onClick={toggleMenu} className="md:hidden text-foreground">
             <Menu className="h-6 w-6" />
@@ -76,7 +76,7 @@ export default function Header() {
               </a>
             ))}
             <CtaButton asChild className="mt-8 text-xl px-10 py-4">
-                <a href="#" onClick={toggleMenu}>Get Free Consultation</a>
+                <a href="#contact" onClick={toggleMenu}>Get Free Consultation</a>
             </CtaButton>
         </nav>
       </div>

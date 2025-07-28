@@ -22,8 +22,8 @@ export default function Hero() {
       <div className="absolute inset-0 z-[-1]">
         <Image
           src="https://placehold.co/1920x1080.png"
-          alt="Abstract background of a swirling nebula"
-          data-ai-hint="swirling nebula"
+          alt="Abstract background of a swirling nebula of data"
+          data-ai-hint="glowing neural network deep space"
           fill
           style={{objectFit: "cover"}}
           className="opacity-30"
@@ -38,12 +38,12 @@ export default function Hero() {
           className="transition-transform duration-300 ease-kibou"
         >
           <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-foreground leading-tight">
-            We build <span className="text-gradient">beautiful</span> digital
+            We build beautiful digital
             <br />
             experiences that drive growth.
           </h1>
           <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground">
-            We are Kibou Systems, a creative engineering team dedicated to crafting high-performance, visually stunning web applications.
+            We help ambitious businesses like yours grow with boost digital presence with cutting-edge tech with beautiful design and development.
           </p>
         </div>
         <div
@@ -51,7 +51,7 @@ export default function Hero() {
           style={{ transform: `translate3d(${transform.x * 0.5}px, ${transform.y * 0.5}px, 0)` }}
         >
             <CtaButton asChild className="py-4 px-10 text-lg">
-                <a href="#">Get Free Consultation</a>
+                <a href="#contact">Get Free Consultation</a>
             </CtaButton>
         </div>
       </div>
