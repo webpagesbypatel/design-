@@ -113,11 +113,11 @@ export default function KibouHero() {
   return (
     <section ref={heroRef} id="home" className="relative w-full h-screen bg-black text-white overflow-hidden">
       <Image 
-        src="https://placehold.co/1920x1080.png"
-        alt="Colorful digital awe abstract background"
+        src="https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80"
+        alt="Woman at a computer with vibrant lights"
         fill
-        className="object-cover absolute z-0 opacity-40"
-        data-ai-hint="digital abstract"
+        className="object-cover absolute z-0 opacity-50"
+        data-ai-hint="woman monitor"
         priority
       />
       <ParticleCanvas />
