@@ -17,15 +17,16 @@ const services = [
   },
   {
     icon: Zap,
-    title: "SEO & Performance",
-    description: "Optimizing your digital presence to rank higher on search engines and deliver lightning-fast load times.",
+    title: "AI & Automation",
+    description: "Integrating intelligent automation and AI-driven features to streamline processes and boost efficiency.",
   },
 ];
 
 const ServiceCard = ({ icon: Icon, title, description, className }: { icon: React.ElementType, title: string, description: string, className?: string }) => (
-    <div className={cn("group relative overflow-hidden rounded-xl p-8 glass-card transition-all duration-500 ease-kibou hover:shadow-2xl hover:shadow-kibou-violet/10 hover:-translate-y-2", className)}>
+    <div className={cn("group relative overflow-hidden rounded-xl p-8 glass-card transition-all duration-500 ease-kibou hover:shadow-2xl hover:shadow-kibou-violet/20 hover:-translate-y-2", className)}>
         <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-kibou">
-            <div className="absolute inset-[-200%] animate-gradient-flow gradient-background" />
+            <div className="absolute -inset-2 animate-gradient-flow gradient-background opacity-30 blur-xl" />
+            <div className="absolute inset-0 gradient-border opacity-0 group-hover:opacity-100" />
         </div>
         <div className="relative z-10">
             <div className="mb-6 inline-block rounded-lg p-3 gradient-background">
@@ -63,8 +64,8 @@ export default function Services() {
   }, []);
 
   return (
-    <section id="services" ref={ref} className="py-20 md:py-32 container mx-auto px-4">
-      <div className="text-center mb-16">
+    <section id="services" ref={ref} className="py-20 md:py-32 container mx-auto px-4 aurora-background">
+      <div className="text-center mb-16 relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold font-headline">
           Our Services
         </h2>
@@ -73,7 +74,7 @@ export default function Services() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
         {services.map((service, index) => (
           <div
             key={service.title}
