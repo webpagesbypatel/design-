@@ -1,5 +1,4 @@
-import Header from '@/components/layout/header';
-import Hero from '@/components/sections/hero';
+import KibouHero from '@/components/sections/kibou-hero';
 import Services from '@/components/sections/services';
 import Process from '@/components/sections/process';
 import Testimonials from '@/components/sections/testimonials';
@@ -10,9 +9,8 @@ import ContactForm from '@/components/sections/contact';
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      <Header />
       <main className="flex-grow">
-        <Hero />
+        <KibouHero />
         <Services />
         <Process />
         <Testimonials />
