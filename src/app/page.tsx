@@ -9,8 +9,8 @@ import ContactForm from '@/components/sections/contact';
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background">
-      <main className="flex-grow">
-        <KibouHero />
+      <KibouHero />
+      <main className="flex-grow z-10 bg-background">
         <Services />
         <Process />
         <Testimonials />
