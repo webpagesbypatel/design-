@@ -1,52 +1,22 @@
 "use client";
 
 import React, { useRef, useEffect } from 'react';
-import Image from 'next/image';
 import { cn } from "@/lib/utils";
 
 export default function Hero() {
-  const imageRef = useRef<HTMLDivElement>(null);
   const heroRef = useRef<HTMLElement>(null);
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
-    if (!imageRef.current) return;
-    const { clientX, clientY, currentTarget } = e;
-    const { left, top, width, height } = currentTarget.getBoundingClientRect();
-    const x = ((clientX - left) / width - 0.5) * 20; 
-    const y = ((clientY - top) / height - 0.5) * 20;
-    
-    imageRef.current.style.transform = `perspective(1000px) rotateY(${-x}deg) rotateX(${y}deg) scale(1.05)`;
-  };
-
-  const handleMouseLeave = () => {
-    if (!imageRef.current) return;
-    imageRef.current.style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1)';
-  };
-
-  useEffect(() => {
-    const heroElement = heroRef.current;
-    if (heroElement) {
-        heroElement.addEventListener('mouseleave', handleMouseLeave);
-    }
-    return () => {
-        if (heroElement) {
-            heroElement.removeEventListener('mouseleave', handleMouseLeave);
-        }
-    };
-}, []);
 
   return (
     <section 
       id="home" 
       ref={heroRef}
       className="relative min-h-screen w-full flex items-center justify-center overflow-hidden aurora-background"
-      onMouseMove={handleMouseMove}
     >
       <div className="relative z-10 container mx-auto px-4">
-        <div className="grid lg:grid-cols-10 gap-8 items-center">
+        <div className="grid lg:grid-cols-1 gap-8 items-center">
           
-          {/* Left Column (Text) */}
-          <div className="lg:col-span-7 text-center lg:text-left">
+          {/* Text Column */}
+          <div className="text-center">
             <div className="animate-fade-in" style={{ animationDelay: '500ms' }}>
               <div className="overflow-hidden">
                 <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-tight animate-slide-up" style={{ animationDelay: '500ms' }}>
@@ -54,7 +24,7 @@ export default function Hero() {
                 </h1>
               </div>
             </div>
-            <p className="mt-6 max-w-xl mx-auto lg:mx-0 text-lg md:text-xl text-gray-300 animate-fade-in-up" style={{ animationDelay: '700ms' }}>
+            <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-300 animate-fade-in-up" style={{ animationDelay: '700ms' }}>
               We help ambitious businesses like yours grow with boost digital presence with cutting-edge tech with beautiful design and development.
             </p>
             <div className="mt-10 animate-fade-in-up" style={{ animationDelay: '900ms' }}>
@@ -66,26 +36,6 @@ export default function Hero() {
               </a>
             </div>
           </div>
-
-          {/* Right Column (Image) */}
-          <div className="lg:col-span-3 flex justify-center items-center">
-            <div 
-              ref={imageRef}
-              className="relative w-64 h-64 md:w-80 md:h-80 transition-transform duration-100 ease-linear animate-fade-in-scale" 
-              style={{ transformStyle: 'preserve-3d', animationDelay: '200ms' }}
-            >
-              <Image
-                src="https://placehold.co/400x400.png"
-                alt="Abstract 3D glowing sculpture"
-                data-ai-hint="glowing glass sculpture dark"
-                fill
-                style={{ objectFit: 'contain' }}
-                className="animate-float"
-                priority
-              />
-            </div>
-          </div>
-
         </div>
       </div>
       <style jsx>{`
