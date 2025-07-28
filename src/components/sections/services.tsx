@@ -40,7 +40,7 @@ const services = [
 const ServiceCard = ({ icon: Icon, title, description, className }: { icon: React.ElementType, title: string, description: string, className?: string }) => (
     <div className={cn("group relative overflow-hidden rounded-xl p-8 glass-card transition-all duration-500 ease-kibou hover:shadow-2xl hover:shadow-kibou-violet/20 hover:-translate-y-2", className)}>
         <div className="absolute inset-0 z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-kibou">
-            <div className="absolute -inset-2 animate-gradient-flow gradient-background opacity-30 blur-xl" />
+            <div className="absolute -inset-2 animate-gradient-flow gradient-background opacity-50 blur-xl" />
             <div className="absolute inset-0 gradient-border opacity-0 group-hover:opacity-100" />
         </div>
         <div className="relative z-10">
@@ -49,7 +49,6 @@ const ServiceCard = ({ icon: Icon, title, description, className }: { icon: Reac
             </div>
             <h3 className="mb-2 text-2xl font-bold font-headline">{title}</h3>
             <p className="text-muted-foreground">{description}</p>
-            <ArrowRight className="absolute bottom-8 right-8 h-6 w-6 text-muted-foreground/50 opacity-0 transform -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 ease-kibou" />
         </div>
     </div>
   );
