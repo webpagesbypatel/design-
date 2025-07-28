@@ -9,6 +9,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'linear-to-br': 'linear-gradient(to bottom right, var(--tw-gradient-stops))',
+      },
       fontFamily: {
         body: ['"PT Sans"', 'sans-serif'],
         headline: ['Poppins', 'sans-serif'],
