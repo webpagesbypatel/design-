@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from 'react';
-import { Canvas, useFrame, useLoader } from '@react-three/fiber';
-import { TextureLoader, Shape, ExtrudeGeometry } from 'three';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { Shape, ExtrudeGeometry, Group } from 'three';
 
 const Box = ({ position, rotation }: { position: [number, number, number], rotation: [number, number, number] }) => {
     const shape = new Shape();
@@ -64,7 +64,7 @@ const Box = ({ position, rotation }: { position: [number, number, number], rotat
 };
 
 const AnimatedBoxes = () => {
-    const groupRef = useRef<THREE.Group>(null!);
+    const groupRef = useRef<Group>(null!);
 
     useFrame((state, delta) => {
         if (groupRef.current) {
