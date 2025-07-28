@@ -1,11 +1,45 @@
 "use client";
 
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import { cn } from "@/lib/utils";
 import { ParticleCanvas } from '@/components/particle-canvas';
+import { CtaButton } from '@/components/ui/cta-button';
 
 export default function Hero() {
   const heroRef = useRef<HTMLElement>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    // For initial fade-in animation
+    const timeout = setTimeout(() => {
+        setInView(true);
+    }, 100);
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (!heroRef.current) return;
+      const { clientX, clientY } = e;
+      const { offsetWidth, offsetHeight } = heroRef.current;
+      const xPos = (clientX / offsetWidth - 0.5) * 2;
+      const yPos = (clientY / offsetHeight - 0.5) * 2;
+
+      const headline = heroRef.current.querySelector('h1');
+      const paragraph = heroRef.current.querySelector('p');
+
+      if (headline) {
+        headline.style.transform = `translateX(${xPos * -15}px) translateY(${yPos * -10}px)`;
+      }
+      if (paragraph) {
+        paragraph.style.transform = `translateX(${xPos * 8}px) translateY(${yPos * 5}px)`;
+      }
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    return () => {
+        clearTimeout(timeout)
+        window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, []);
 
   return (
     <section 
@@ -15,74 +49,36 @@ export default function Hero() {
     >
       <ParticleCanvas />
       <div className="relative z-10 container mx-auto px-4">
-        <div className="flex justify-center">
-          <div className="text-center">
-            <div className="animate-fade-in" style={{ animationDelay: '500ms' }}>
-              <div className="overflow-hidden">
-                <h1 className="font-headline text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white leading-tight animate-slide-up" style={{ animationDelay: '500ms' }}>
-                  We build beautiful digital experiences that drive growth.
-                </h1>
-              </div>
-            </div>
-            <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-gray-300 animate-fade-in-up" style={{ animationDelay: '700ms' }}>
-              We help ambitious businesses like yours grow with boost digital presence with cutting-edge tech with beautiful design and development.
+        <div className="max-w-4xl mx-auto text-center">
+            <h1 
+                className={cn(
+                    "font-headline text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-gradient leading-tight transition-all duration-1000 ease-kibou",
+                    inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                )}
+                style={{transitionProperty: 'transform, opacity, transform'}}
+            >
+                Digital Experiences that Drive Growth.
+            </h1>
+            <p 
+                className={cn(
+                    "mt-6 max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground transition-all duration-1000 ease-kibou",
+                    inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                )}
+                style={{transitionDelay: '200ms', transitionProperty: 'transform, opacity, transform'}}
+            >
+                We are a digital product studio that partners with ambitious businesses to design, build, and scale beautiful, high-performance web applications.
             </p>
-            <div className="mt-10 animate-fade-in-up" style={{ animationDelay: '900ms' }}>
-              <a 
-                href="#contact" 
-                className="inline-block rounded-full bg-[#2F81F7] text-white font-bold text-lg px-8 py-4 transition-all duration-300 ease-in-out hover:bg-blue-500 hover:shadow-[0_0_25px_#2F81F7] hover:-translate-y-1"
-              >
-                Get Free Consultation
-              </a>
+            <div 
+                className={cn(
+                    "mt-10 transition-opacity duration-1000 ease-kibou",
+                     inView ? "opacity-100" : "opacity-0"
+                )}
+                style={{transitionDelay: '400ms'}}
+            >
+              <CtaButton href="#contact">Get Free Consultation</CtaButton>
             </div>
-          </div>
         </div>
       </div>
-      <style jsx>{`
-        @keyframes fade-in {
-          from { opacity: 0; }
-          to { opacity: 1; }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.8s ease-out forwards;
-          opacity: 0;
-        }
-
-        @keyframes fade-in-up {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in-up {
-          animation: fade-in-up 0.8s ease-out forwards;
-          opacity: 0;
-        }
-
-        @keyframes slide-up {
-          from { transform: translateY(100%); }
-          to { transform: translateY(0); }
-        }
-        .animate-slide-up {
-          animation: slide-up 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
-        }
-
-        @keyframes fade-in-scale {
-          from { opacity: 0; transform: scale(0.95); }
-          to { opacity: 1; transform: scale(1); }
-        }
-        .animate-fade-in-scale {
-            animation: fade-in-scale 1s ease-out forwards;
-            opacity: 0;
-        }
-
-        @keyframes float {
-          0% { transform: translateY(0px); }
-          50% { transform: translateY(-15px); }
-          100% { transform: translateY(0px); }
-        }
-        .animate-float {
-          animation: float 8s ease-in-out infinite;
-        }
-      `}</style>
     </section>
   );
 }
