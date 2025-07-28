@@ -25,11 +25,14 @@ export default function Header() {
     <>
       <header
         className={cn(
-          "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-kibou",
-          hasScrolled ? "py-4 glass-card shadow-lg" : "py-6"
+          "fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-kibou",
+          hasScrolled ? "top-4" : "top-0"
         )}
       >
-        <div className="container mx-auto flex items-center justify-between px-4">
+        <div className={cn(
+          "container mx-auto flex items-center justify-between px-4 transition-all duration-500 ease-kibou",
+          hasScrolled ? "py-3 glass-card rounded-full shadow-lg max-w-5xl" : "py-6"
+        )}>
           <a href="#home" className="text-2xl font-bold font-headline tracking-tighter">
             Kibou Systems
             <span className="text-kibou-violet">.</span>
