@@ -77,12 +77,11 @@ export default function Hero() {
             >
               <div className="w-full h-full animate-float">
                 <Image
-                  src="https://placehold.co/600x600.png"
+                  src="https://images.unsplash.com/photo-1642054220431-649c53b0d3de?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxMnx8d2ViJTIwc2VydmljZXxlbnwwfHx8fDE3NTM2ODkyODl8MA&ixlib=rb-4.1.0&q=80&w=1080"
                   alt="Abstract 3D rendering representing digital innovation"
                   layout="fill"
                   objectFit="contain"
                   className="rounded-full"
-                  data-ai-hint="glowing neural network"
                 />
               </div>
             </div>
