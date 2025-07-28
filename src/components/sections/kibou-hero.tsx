@@ -113,7 +113,7 @@ export default function KibouHero() {
   return (
     <section ref={heroRef} id="home" className="relative w-full h-screen bg-black text-white overflow-hidden">
       <Image 
-        src="https://images.unsplash.com/photo-1534447677768-6d794f097101?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&q=80"
+        src="https://images.stockcake.com/public/1/5/3/15325383-e3b7-4a06-b726-edae65aa8fa2_large/colorful-digital-awe-stockcake.jpg"
         alt="Abstract colorful digital art"
         fill
         className="object-cover absolute z-0 opacity-50"
