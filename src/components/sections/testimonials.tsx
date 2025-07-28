@@ -28,7 +28,7 @@ const testimonials = [
     quote: "A truly seamless experience from start to finish. We've seen a significant increase in user engagement since launch.",
     author: "Emily White",
     company: "Marketing Director, Future Corp",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhdmF0YXJ8ZW58MHx8fHwxNzUzNjg5NTMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+    avatar: "https://images.unsplash.com/photo-1573165850883-9b0e18c44bd2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxpbmRpYW4lMjB3b21lbnxlbnwwfHx8fDE3NTM2OTIwODF8MA&ixlib=rb-4.1.0&q=80&w=1080"
   },
 ];
 
