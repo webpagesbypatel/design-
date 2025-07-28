@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import { CtaButton } from "@/components/ui/cta-button";
 import { Menu, X } from 'lucide-react';
 
-const navLinks = ["Work", "Services", "Blog", "Contact"];
+const navLinks = ["Work", "Services", "Process", "Contact"];
 
 export default function Header() {
   const [hasScrolled, setHasScrolled] = useState(false);

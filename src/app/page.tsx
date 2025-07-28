@@ -6,6 +6,7 @@ import Process from '@/components/sections/process';
 import Testimonials from '@/components/sections/testimonials';
 import Faq from '@/components/sections/faq';
 import Footer from '@/components/layout/footer';
+import ContactForm from '@/components/sections/contact';
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Process />
         <Testimonials />
         <Faq />
+        <ContactForm />
       </main>
       <Footer />
     </div>
