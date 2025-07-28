@@ -96,11 +96,9 @@ const AnimatedBoxes = () => {
 };
 
 export const Scene = () => {
-    const [cameraPosition, setCameraPosition] = React.useState<[number, number, number]>([5, 5, 20]);
-
     return (
         <div className="w-full h-full z-0">
-            <Canvas camera={{ position: cameraPosition, fov: 40 }}>
+            <Canvas camera={{ position: [5, 5, 20], fov: 40 }}>
                 <ambientLight intensity={15} />
                 <directionalLight position={[10, 10, 5]} intensity={15} />
                 <AnimatedBoxes />
