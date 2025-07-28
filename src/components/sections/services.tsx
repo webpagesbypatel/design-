@@ -1,24 +1,39 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Code2, LayoutTemplate, Zap } from "lucide-react";
+import { ArrowRight, Code2, LayoutTemplate, Zap, Bot, Smartphone, Settings } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const services = [
   {
+    icon: Bot,
+    title: "AI/ML Solutions",
+    description: "Cutting-edge AI and machine learning solutions that drive innovation and efficiency.",
+  },
+  {
+    icon: Zap,
+    title: "Automation",
+    description: "Streamline your processes with our automation solutions, saving time and reducing errors.",
+  },
+  {
     icon: LayoutTemplate,
-    title: "UI/UX Design",
-    description: "Crafting intuitive and visually stunning user interfaces that provide a seamless user experience.",
+    title: "Web Design",
+    description: "Beautiful, conversion-focused websites that engage your audience and drive business growth.",
   },
   {
     icon: Code2,
     title: "Web Development",
-    description: "Building robust, scalable, and high-performance websites and applications using modern technologies.",
+    description: "Custom web applications and sites built with the latest technologies for optimal performance.",
   },
   {
-    icon: Zap,
-    title: "AI & Automation",
-    description: "Integrating intelligent automation and AI-driven features to streamline processes and boost efficiency.",
+    icon: Smartphone,
+    title: "Mobile App Development",
+    description: "Innovative mobile applications that enhance user experience and drive engagement.",
+  },
+  {
+    icon: Settings,
+    title: "Custom Software Development",
+    description: "Tailored software solutions that meet your unique business needs and challenges.",
   },
 ];
 
@@ -69,8 +84,11 @@ export default function Services() {
         <h2 className="text-4xl md:text-5xl font-bold font-headline">
           Our Services
         </h2>
-        <p className="mt-4 max-w-2xl mx-auto text-lg text-muted-foreground">
-          From concept to launch, we provide a complete suite of services to bring your vision to life.
+        <h3 className="mt-4 text-xl md:text-2xl text-gradient">
+          Transforming your digital presence with our expertise
+        </h3>
+        <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
+          We offer a comprehensive suite of services designed to help your business stand out and succeed in the digital world.
         </p>
       </div>
 
