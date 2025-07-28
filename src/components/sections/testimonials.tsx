@@ -16,19 +16,19 @@ const testimonials = [
     quote: "Working with Kibou Systems was a game-changer. Their attention to detail and creative solutions are unparalleled.",
     author: "Jane Doe",
     company: "CEO, Tech Innovators",
-    avatar: "https://placehold.co/100x100.png"
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhdmF0YXJ8ZW58MHx8fHwxNzUzNjg5NTMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     quote: "The final product exceeded all our expectations. The team is professional, responsive, and incredibly talented.",
     author: "John Smith",
     company: "Founder, Creative Solutions",
-    avatar: "https://placehold.co/100x100.png"
+    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxhdmF0YXJ8ZW58MHx8fHwxNzUzNjg5NTMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
   {
     quote: "A truly seamless experience from start to finish. We've seen a significant increase in user engagement since launch.",
     author: "Emily White",
     company: "Marketing Director, Future Corp",
-    avatar: "https://placehold.co/100x100.png"
+    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxhdmF0YXJ8ZW58MHx8fHwxNzUzNjg5NTMwfDA&ixlib=rb-4.1.0&q=80&w=1080"
   },
 ];
 
@@ -88,7 +88,7 @@ export default function Testimonials() {
                             alt={testimonial.author}
                             width={80}
                             height={80}
-                            className="rounded-full mx-auto mb-6 border-2 border-kibou-violet"
+                            className="rounded-full mx-auto mb-6 border-2 border-kibou-violet object-cover"
                             data-ai-hint="person avatar"
                         />
                         <p className="text-lg italic text-foreground">"{testimonial.quote}"</p>
