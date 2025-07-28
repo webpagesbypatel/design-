@@ -1,5 +1,5 @@
 import Header from '@/components/layout/header';
-import { DemoOne as Hero } from '@/components/sections/new-hero';
+import Hero from '@/components/sections/hero';
 import Services from '@/components/sections/services';
 import Process from '@/components/sections/process';
 import Testimonials from '@/components/sections/testimonials';
