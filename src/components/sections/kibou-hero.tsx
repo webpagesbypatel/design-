@@ -2,6 +2,7 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { CtaButton } from "@/components/ui/cta-button";
 import { cn } from "@/lib/utils";
 import { Menu, X } from 'lucide-react';
@@ -111,6 +112,14 @@ export default function KibouHero() {
 
   return (
     <section ref={heroRef} id="home" className="relative w-full h-screen bg-black text-white overflow-hidden">
+      <Image 
+        src="https://placehold.co/1920x1080.png"
+        alt="Colorful digital awe abstract background"
+        fill
+        className="object-cover absolute z-0 opacity-20"
+        data-ai-hint="digital abstract"
+        priority
+      />
       <ParticleCanvas />
       <Header />
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
