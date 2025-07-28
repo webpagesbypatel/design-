@@ -116,7 +116,7 @@ export default function KibouHero() {
         src="https://placehold.co/1920x1080.png"
         alt="Colorful digital awe abstract background"
         fill
-        className="object-cover absolute z-0 opacity-20"
+        className="object-cover absolute z-0 opacity-40"
         data-ai-hint="digital abstract"
         priority
       />
