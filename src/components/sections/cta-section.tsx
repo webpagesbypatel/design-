@@ -24,7 +24,7 @@ export default function CtaSection() {
           Let's discuss how we can help you achieve your business goals with a tailored digital strategy.
         </p>
         <CtaButton href="mailto:contact@kibousystems.com">
-          Get in touch <ArrowRight className="ml-2" />
+          Get in touch <ArrowRight />
         </CtaButton>
       </motion.div>
     </section>
