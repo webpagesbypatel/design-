@@ -6,31 +6,31 @@ import Image from "next/image";
 
 const blogPosts = [
   {
-    title: "The Future of AI in Web Development",
-    description: "Explore how artificial intelligence is revolutionizing the way we build and interact with websites.",
+    title: "Building Your First AI Agent: A Step-by-Step Guide",
+    description: "Unlock the power of automation with our guide to creating intelligent AI agents that can streamline your business operations.",
     image: "https://placehold.co/600x400.png",
-    author: "Jane Doe",
-    date: "Oct 26, 2023",
-    tag: "AI",
-    aiHint: "robot technology"
+    author: "Alex Johnson",
+    date: "Nov 05, 2023",
+    tag: "AI Agents",
+    aiHint: "robot assistant"
   },
   {
-    title: "Mastering Headless CMS for Modern Web Apps",
-    description: "A deep dive into the benefits of using a headless CMS for creating flexible and scalable web applications.",
+    title: "The Rise of Server-Side Rendering in Modern Web Dev",
+    description: "Discover why SSR with frameworks like Next.js is crucial for performance, SEO, and building scalable web applications.",
     image: "https://placehold.co/600x400.png",
-    author: "John Smith",
-    date: "Oct 22, 2023",
+    author: "Samantha Lee",
+    date: "Nov 01, 2023",
     tag: "Web Dev",
-    aiHint: "code programming"
+    aiHint: "web development code"
   },
   {
-    title: "UI/UX Design Trends to Watch in 2024",
-    description: "Stay ahead of the curve with these upcoming design trends that will shape user experiences.",
+    title: "Practical AI Solutions That Deliver Real-World Results",
+    description: "Move beyond the hype. We explore AI solutions that are actively solving real business problems and delivering tangible ROI.",
     image: "https://placehold.co/600x400.png",
-    author: "Emily White",
-    date: "Oct 18, 2023",
-    tag: "Design",
-    aiHint: "design interface"
+    author: "David Chen",
+    date: "Oct 28, 2023",
+    tag: "AI Solutions",
+    aiHint: "artificial intelligence"
   },
 ];
 
