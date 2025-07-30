@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { CtaButton } from "@/components/ui/cta-button";
 import { cn } from "@/lib/utils";
@@ -92,26 +91,8 @@ const Header = () => {
 
 // Main Hero Component
 export default function KibouHero() {
-  const heroRef = useRef<HTMLDivElement>(null);
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const handleMouseMove = (event: MouseEvent) => {
-      if (heroRef.current) {
-        const { clientX, clientY } = event;
-        const { left, top, width, height } = heroRef.current.getBoundingClientRect();
-        const x = (clientX - left - width / 2) / (width/2);
-        const y = (clientY - top - height / 2) / (height/2);
-        setMousePosition({ x, y });
-      }
-    };
-
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, []);
-
   return (
-    <section ref={heroRef} id="home" className="relative w-full h-screen bg-black text-white overflow-hidden">
+    <section id="home" className="relative w-full h-screen bg-black text-white overflow-hidden">
       <Image 
         src="https://images.stockcake.com/public/1/5/3/15325383-e3b7-4a06-b726-edae65aa8fa2_large/colorful-digital-awe-stockcake.jpg"
         alt="Abstract colorful digital art"
@@ -123,26 +104,12 @@ export default function KibouHero() {
       <ParticleCanvas />
       <Header />
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-        <motion.div
-          style={{
-            transform: `translate(${mousePosition.x * 20}px, ${mousePosition.y * 20}px)`,
-            transition: 'transform 0.2s ease-out'
-          }}
-        >
-          <h1 className="text-5xl md:text-7xl font-bold font-headline tracking-tight max-w-4xl bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
-            AI Support That Works As Hard As You Do
-          </h1>
-        </motion.div>
-        <motion.div
-            style={{
-                transform: `translate(${mousePosition.x * 10}px, ${mousePosition.y * 10}px)`,
-                transition: 'transform 0.2s ease-out'
-            }}
-        >
-            <p className="mt-6 text-xl tracking-widest font-light text-foreground/80">
-              Build &nbsp;&middot;&nbsp; Innovate &nbsp;&middot;&nbsp; Sustain
-            </p>
-        </motion.div>
+        <h1 className="text-5xl md:text-7xl font-bold font-headline tracking-tight max-w-4xl bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+          AI Support That Works As Hard As You Do
+        </h1>
+        <p className="mt-6 text-xl tracking-widest font-light text-foreground/80">
+          Build &nbsp;&middot;&nbsp; Innovate &nbsp;&middot;&nbsp; Sustain
+        </p>
         <div className="mt-8">
           <CtaButton href="#contact">
             Get Free Consultation
