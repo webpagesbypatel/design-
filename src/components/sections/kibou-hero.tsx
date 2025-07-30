@@ -1,21 +1,22 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import { CtaButton } from "@/components/ui/cta-button";
 import { cn } from "@/lib/utils";
 import { Menu, X } from 'lucide-react';
 import { ParticleCanvas } from '@/components/particle-canvas';
+import { motion } from 'framer-motion';
 
 // Header Component
 const navLinks = ["Services", "Process", "Testimonials", "Contact"];
 
 const Header = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [hasScrolled, setHasScrolled] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+    const [hasScrolled, setHasScrolled] = React.useState(false);
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-    useEffect(() => {
+    React.useEffect(() => {
         const handleScroll = () => {
             setHasScrolled(window.scrollY > 10);
         };
@@ -104,12 +105,12 @@ export default function KibouHero() {
       <ParticleCanvas />
       <Header />
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
-        <h1 className="text-5xl md:text-7xl font-bold font-headline tracking-tight max-w-4xl bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
-          AI Support That Works As Hard As You Do
-        </h1>
-        <p className="mt-6 text-xl tracking-widest font-light text-foreground/80">
-          Build &nbsp;&middot;&nbsp; Innovate &nbsp;&middot;&nbsp; Sustain
-        </p>
+          <h1 className="text-5xl md:text-7xl font-bold font-headline tracking-tight max-w-4xl bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
+            AI Support That Works As Hard As You Do
+          </h1>
+          <p className="mt-6 text-xl tracking-widest font-bold text-foreground">
+            Build &nbsp;&middot;&nbsp; Innovate &nbsp;&middot;&nbsp; Sustain
+          </p>
         <div className="mt-8">
           <CtaButton href="#contact">
             Get Free Consultation
