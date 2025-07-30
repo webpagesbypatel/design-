@@ -1,39 +1,24 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, Code2, LayoutTemplate, Zap, Bot, Smartphone, Settings } from "lucide-react";
+import { BarChart, Bot, Code2 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const services = [
   {
     icon: Bot,
-    title: "AI/ML Solutions",
-    description: "Cutting-edge AI and machine learning solutions that drive innovation and efficiency.",
-  },
-  {
-    icon: Zap,
-    title: "Automation",
-    description: "Streamline your processes with our automation solutions, saving time and reducing errors.",
-  },
-  {
-    icon: LayoutTemplate,
-    title: "Web Design",
-    description: "Beautiful, conversion-focused websites that engage your audience and drive business growth.",
+    title: "AI Agents",
+    description: "Intelligent AI agents designed to automate tasks and enhance user interactions, tailored to your business needs.",
   },
   {
     icon: Code2,
-    title: "Web Development",
-    description: "Custom web applications and sites built with the latest technologies for optimal performance.",
+    title: "Custom Software",
+    description: "Bespoke software solutions, from web applications to enterprise systems, built for performance and scale.",
   },
   {
-    icon: Smartphone,
-    title: "Mobile App Development",
-    description: "Innovative mobile applications that enhance user experience and drive engagement.",
-  },
-  {
-    icon: Settings,
-    title: "Custom Software Development",
-    description: "Tailored software solutions that meet your unique business needs and challenges.",
+    icon: BarChart,
+    title: "AI + Analytics",
+    description: "Unlock powerful insights from your data with AI-driven analytics to make smarter business decisions.",
   },
 ];
 
@@ -84,11 +69,8 @@ export default function Services() {
           Our Services
         </h2>
         <h3 className="mt-4 text-xl md:text-2xl text-gradient">
-          Transforming your digital presence with our expertise
+          Where Human Insight Meets Machine Precision
         </h3>
-        <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-          We offer a comprehensive suite of services designed to help your business stand out and succeed in the digital world.
-        </p>
       </div>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
