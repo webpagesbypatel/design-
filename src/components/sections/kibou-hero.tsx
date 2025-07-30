@@ -130,7 +130,7 @@ export default function KibouHero() {
           }}
         >
           <h1 className="text-5xl md:text-7xl font-bold font-headline tracking-tight max-w-4xl bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
-            We Build Digital Experiences
+            AI Support That Works As Hard As You Do
           </h1>
         </motion.div>
         <motion.div
