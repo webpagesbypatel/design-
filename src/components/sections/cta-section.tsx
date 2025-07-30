@@ -23,7 +23,7 @@ export default function CtaSection() {
         <p className="max-w-3xl mx-auto text-lg text-muted-foreground mb-8">
           Let's discuss how we can help you achieve your business goals with a tailored digital strategy.
         </p>
-        <CtaButton href="mailto:contact@kibousystems.com">
+        <CtaButton href="https://outlook.office.com/book/KibouSystems1@kibousystems.com/?ismsaljsauthenabled">
           Get in touch <ArrowRight className="inline-block" />
         </CtaButton>
       </motion.div>
