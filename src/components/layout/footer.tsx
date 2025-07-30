@@ -7,7 +7,7 @@ export default function Footer() {
     <footer id="contact" className="border-t border-white/10 py-12">
       <div className="container mx-auto px-4 text-center text-muted-foreground">
         <div className="flex justify-center gap-6 mb-6">
-          <a href="#" className="hover:text-foreground transition-colors"><Twitter /></a>
+          <a href="https://x.com/kibousystems" target="_blank" rel="noopener noreferrer" className="hover:text-foreground transition-colors"><Twitter /></a>
           <a href="#" className="hover:text-foreground transition-colors"><Github /></a>
           <a href="#" className="hover:text-foreground transition-colors"><Linkedin /></a>
         </div>
