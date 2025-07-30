@@ -9,7 +9,7 @@ import { ParticleCanvas } from '@/components/particle-canvas';
 import { motion } from 'framer-motion';
 
 // Header Component
-const navLinks = ["Services", "Process", "Testimonials", "Contact"];
+const navLinks = ["Services", "Blogs", "Contact"];
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);

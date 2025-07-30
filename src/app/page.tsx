@@ -1,7 +1,6 @@
 import KibouHero from '@/components/sections/kibou-hero';
 import Services from '@/components/sections/services';
-import Process from '@/components/sections/process';
-import Testimonials from '@/components/sections/testimonials';
+import Blogs from '@/components/sections/blogs';
 import Faq from '@/components/sections/faq';
 import Footer from '@/components/layout/footer';
 import CtaSection from '@/components/sections/cta-section';
@@ -12,8 +11,7 @@ export default function Home() {
       <KibouHero />
       <main className="flex-grow z-10 bg-background">
         <Services />
-        <Process />
-        <Testimonials />
+        <Blogs />
         <Faq />
         <CtaSection />
       </main>
