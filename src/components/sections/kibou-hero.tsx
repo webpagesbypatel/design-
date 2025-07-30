@@ -53,7 +53,7 @@ const Header = () => {
             ))}
           </nav>
           <div className="hidden md:block">
-            <CtaButton>Get Free Consultation</CtaButton>
+            <CtaButton href="https://outlook.office.com/book/KibouSystems1@kibousystems.com/?ismsaljsauthenabled">Get Free Consultation</CtaButton>
           </div>
           <button onClick={toggleMenu} className="md:hidden text-foreground">
             <Menu className="h-6 w-6" />
@@ -82,7 +82,7 @@ const Header = () => {
               </a>
             ))}
             <CtaButton asChild className="mt-8 text-xl px-10 py-4">
-                <a href="#contact" onClick={toggleMenu}>Get Free Consultation</a>
+                <a href="https://outlook.office.com/book/KibouSystems1@kibousystems.com/?ismsaljsauthenabled" onClick={toggleMenu}>Get Free Consultation</a>
             </CtaButton>
         </nav>
       </div>
@@ -112,7 +112,7 @@ export default function KibouHero() {
             Build &nbsp;&middot;&nbsp; Innovate &nbsp;&middot;&nbsp; Sustain
           </p>
         <div className="mt-8">
-          <CtaButton href="#contact">
+          <CtaButton href="https://outlook.office.com/book/KibouSystems1@kibousystems.com/?ismsaljsauthenabled">
             Get Free Consultation
           </CtaButton>
         </div>
