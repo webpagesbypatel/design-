@@ -1,3 +1,4 @@
+
 "use client";
 
 import React from 'react';
@@ -6,7 +7,6 @@ import { CtaButton } from "@/components/ui/cta-button";
 import { cn } from "@/lib/utils";
 import { Menu, X } from 'lucide-react';
 import { ParticleCanvas } from '@/components/particle-canvas';
-import { motion } from 'framer-motion';
 
 // Header Component
 const navLinks = ["Services", "Blogs", "Contact"];
@@ -40,7 +40,7 @@ const Header = () => {
             Kibou Systems
             <span className="text-kibou-violet">.</span>
           </a>
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link}
