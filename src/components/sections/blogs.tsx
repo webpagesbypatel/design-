@@ -26,7 +26,7 @@ const blogPosts = [
   {
     title: "Practical AI Solutions That Deliver Real-World Results",
     description: "Move beyond the hype. We explore AI solutions that are actively solving real business problems and delivering tangible ROI.",
-    image: "https://placehold.co/600x400.png",
+    image: "https://images.unsplash.com/photo-1620712943543-2858200e9456?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDB8fHx8MTc1Mzk3NzYxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
     author: "David Chen",
     date: "Oct 28, 2023",
     tag: "AI Solutions",
