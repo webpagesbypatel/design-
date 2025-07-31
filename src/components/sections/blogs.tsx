@@ -17,7 +17,7 @@ const blogPosts = [
   {
     title: "The Rise of Server-Side Rendering in Modern Web Dev",
     description: "Discover why SSR with frameworks like Next.js is crucial for performance, SEO, and building scalable web applications.",
-    image: "https://placehold.co/600x400.png",
+    image: "https://images.unsplash.com/photo-1561736778-92e52a7769ef?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxNHx8d2ViJTIwZGV2fGVufDB8fHx8MTc1Mzk3NzY3NXww&ixlib=rb-4.1.0&q=80&w=1080",
     author: "Samantha Lee",
     date: "Nov 01, 2023",
     tag: "Web Dev",
