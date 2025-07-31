@@ -8,7 +8,7 @@ const blogPosts = [
   {
     title: "Building Your First AI Agent: A Step-by-Step Guide",
     description: "Unlock the power of automation with our guide to creating intelligent AI agents that can streamline your business operations.",
-    image: "https://placehold.co/600x400.png",
+    image: "https://images.unsplash.com/photo-1697577418970-95d99b5a55cf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxhaSUyMCUyMHxlbnwwfHx8fDE3NTM5Nzc2MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
     author: "Alex Johnson",
     date: "Nov 05, 2023",
     tag: "AI Agents",
